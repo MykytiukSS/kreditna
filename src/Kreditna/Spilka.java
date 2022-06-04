@@ -3,10 +3,11 @@ package Kreditna;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Spilka {
@@ -25,7 +26,8 @@ public class Spilka {
 		
 		
 		
-		getRandomList(getNames());
+		//getRandomList(getNames());
+		getRandomListTwo(getNames());
 
 	}
 
@@ -61,6 +63,28 @@ public class Spilka {
 		}
 		
 	}
+	public static void getRandomListTwo(List<String>list) {
+		
+		Collections.shuffle(list);
+		LinkedList<String>lst= new LinkedList<>();
+		for (String string : list) {
+			lst.push(string);
+		}
+		int in= 1;
+		for(;lst.size()!=0;) {
+		System.out.println(in+":");
 	
+		System.out.println(lst.pop());
+		System.out.println(lst.pop());
+		System.out.println();
+		in++;
+		}
 
 }
+
+}
+	
+	
+	
+
+
